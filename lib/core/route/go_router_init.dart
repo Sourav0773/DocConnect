@@ -5,10 +5,22 @@ import 'package:doctors_appointment_app/features/auth/registration/presentation/
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../features/error/error_screen.dart';
+import '../../features/splash/presentation/screeen/splash_screen.dart';
 import '../logs/logger.dart';
 
 GoRouter routerinit = GoRouter(
   routes: <RouteBase>[
+    ///  =================================================================
+    ///  ********************** Splash Route *****************************
+    /// ==================================================================
+    GoRoute(
+      name: AppRoutes.SPLASH_ROUTE_NAME,
+      path: AppRoutes.SPLASH_ROUTE_PATH,
+      builder: (BuildContext context, GoRouterState state) {
+        return const SplashScreen();
+      },
+    ),
+
     ///  =================================================================
     ///  ********************** Auth Route *****************************
     /// ==================================================================
